@@ -1,13 +1,16 @@
-const franc = requeire("franc");
-const langs = require("langs");
-const colors = require("colors");
-
-const input = ProcessingInstruction.argv[2];
+import { franc } from 'franc';
+import langs from 'langs';
+import colors from 'colors';
+ 
+const input = process.argv[2];
 const langCode = franc(input);
-
 if (langCode === 'und') {
-    console.log("Sorry, I couldn't find a language match.".red);
+    console.log(colors.red("SORRY, COULDN'T FIGURE IT OUT! TRY WITH MORE SAMPLE TEXT!"));
 } else {
     const language = langs.where("3", langCode);
-    console.log(`I think this text is in ${language.name}`.green);
+    if (language) {
+        console.log(colors.green(`Our best guess is: ${language.name}`));
+    } else {
+        console.log(colors.red(`SORRY, COULDN'T FIND A LANGUAGE FOR CODE: ${langCode}`));
+    }
 }
