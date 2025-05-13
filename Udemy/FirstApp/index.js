@@ -11,6 +11,17 @@ app.get('/', (req, res) => {
     res.send('<h1>This is the home page</h1>');
 })
 
+app.get('/r/:subreddit', (req, res) => {
+    console.log(req.params);
+    const { subreddit } = req.params;
+    res.send( `<h1> Welcome to the ${subreddit} subreddit page</h1>`)
+})
+
+app.get('/r/:subreddit/:postId', (req, res) => {
+    const { subreddit, postId } = req.params;
+    res.send(`<h1> Welcome to the ${subreddit} subreddit page and this is the post with id ${postId} </h1>`) 
+})
+
 app.get('/cats', (req, res) => {
     res.send('Meow!!!');
 })
@@ -21,6 +32,14 @@ app.post('/cats', (req, res) => {
 
 app.get('/dogs', (req, res) => {
     res.send('Woof!!!');
+})
+
+app.get('/search', (req, res) => {
+    const { q } = req.query;
+    if(!q) {
+        res.send('Nothing found if nothing searched');
+    }
+    res.send(`Search results for: ${q}`);
 })
 
 app.get(/(.*)/, (req, res) => {
