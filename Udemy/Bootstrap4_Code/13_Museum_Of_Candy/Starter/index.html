@@ -173,3 +173,56 @@
                         </div>
                     </div>
                 </div>
+
+
+
+<div id="divGroupInputFlashPosition" class="row">
+    <div class="col-12">
+        <div class="card">
+            <h5 class="card-header">@SBS.Resources.General.MoldFlash</h5>
+            <div class="card-body">
+
+                <div class="row mb-3">
+                    <!-- Flash Position Dropdown -->
+                    <div id="txtFlashPosition" class="col-md-4">
+                        <label class="form-label" for="ddlInputFlashPosition">@SBS.Resources.General.FlashPosition</label>
+                        <select id="ddlInputFlashPosition" class="form-control form-control-sm form-select">
+                            <option value="" selected>@SBS.Resources.General.ddlSelect</option>
+                        </select>
+                        <span class="form-text"></span>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="col-md-4 d-flex align-items-end gap-2">
+                        <button id="btnAddItem" type="button" class="btn btn-primary btn-sm">
+                            <i class="glyphicon glyphicon-plus"></i> <span>@SBS.Resources.General.Add</span>
+                        </button>
+                        <button id="btnRemoveItem" type="button" class="btn btn-danger btn-sm">
+                            <i class="glyphicon glyphicon-trash"></i> <span>@SBS.Resources.General.Delete</span>
+                        </button>
+                    </div>
+
+                    <!-- Imagen -->
+                    <div class="col-md-4">
+                        <label class="form-label" for="txtPictureApprovalDetail">@SBS.Resources.General.Picture</label>
+                        <input type="file" id="txtPictureApprovalDetail" class="form-control form-control-sm" accept="image/*" />
+                        <span class="form-text"></span>
+                    </div>
+                </div>
+
+                <!-- Tablas -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <table id="jqGridFlashPosition" class="table table-sm"></table>
+                        <div id="jqGridFlashPositionPager"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <table id="jqGridMoldFlashlessFile" class="table table-sm"></table>
+                        <div id="jqGridMoldFlashlessFilePager"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
