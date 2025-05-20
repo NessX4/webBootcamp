@@ -1,73 +1,27 @@
-<div id="divGroupInputFlashPosition">
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <h5 class="card-header text-center">@SBS.Resources.General.MoldFlash</h5>
-                <div class="card-body">
-                    <!-- Dropdown, Add/Delete Buttons and File Input -->
-                    <div class="row mb-3">
-                        <!-- Flash Position Section -->
-                        <div class="col-lg-6 col-md-12 mb-2">
-                            <label class="form-label" for="ddlInputFlashPosition">@SBS.Resources.General.FlashPosition</label>
-                            <div class="d-flex gap-2">
-                                <select id="ddlInputFlashPosition" class="form-control form-control-sm form-select">
-                                    <option value="" selected>@SBS.Resources.General.ddlSelect</option>
-                                </select>
-                                <button id="btnAddItem" type="button" class="btn btn-primary btn-sm">
-                                    <i class="glyphicon glyphicon-plus"></i> <span>@SBS.Resources.General.Add</span>
-                                </button>
-                                <button id="btnRemoveItem" type="button" class="btn btn-primary btn-sm">
-                                    <i class="glyphicon glyphicon-trash"></i> <span>@SBS.Resources.General.Delete</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Picture Section -->
-                        <div class="col-lg-6 col-md-12 mb-2">
-                            <label class="form-label" for="txtPictureApprovalDetail">@SBS.Resources.General.Picture</label>
-                            <div class="d-flex gap-2">
-                                <input type="file" id="txtPictureApprovalDetail" class="form-control form-control-sm" accept="image/*" />
-                                <button id="btnAddFile" type="button" class="btn btn-primary btn-sm">
-                                    <i class="glyphicon glyphicon-plus"></i> <span>@SBS.Resources.General.Add</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 col-md-12 mb-3 order-lg-1 order-md-1">
-                            <table id="jqGridFlashPosition" class="table table-sm"></table>
-                            <div id="jqGridFlashPositionPager"></div>
-                        </div>
-                        <div class="col-lg-6 col-md-12 order-lg-2 order-md-2">
-                            <table id="jqGridMoldFlashlessFile" class="table table-sm"></table>
-                            <div id="jqGridMoldFlashlessFilePager"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class=" row">
-                <div class="col-auto form-check has-feedback-sm mt-2 me-3 ms-3">
-                    <input id="chkInputIsDisabled" class="form-check-input" type="checkbox" value="">
-                    <label class="form-label" for="chkInputIsDisabled">@SBS.Resources.General.IsDisabled</label>
-                    <span class='form-text'></span>
-                </div>
-            </div>
+<div class="row mb-3">
+    <div class="col-lg-6 col-md-12 mb-2">
+        <label class="form-label" for="ddlInputFlashPosition">@SBS.Resources.General.FlashPosition</label>
+        <div class="d-flex gap-2">
+            <select id="ddlInputFlashPosition" class="form-control form-control-sm form-select">
+                <option value="" selected>@SBS.Resources.General.ddlSelect</option>
+            </select>
+            <button id="btnAddItem" type="button" class="btn btn-primary btn-sm">
+                <i class="glyphicon glyphicon-plus"></i> <span>@SBS.Resources.General.Add</span>
+            </button>
+            <button id="btnRemoveItem" type="button" class="btn btn-danger btn-sm">
+                <i class="glyphicon glyphicon-trash"></i> <span>@SBS.Resources.General.Delete</span>
+            </button>
         </div>
-        
-        <div class="modal-footer">
-            <div class="pull-right">
-                <button id="btnInputNew" type="button" class="btn btn-light me-4">
-                    <i class="fa fa-save"></i> <span>@SBS.Resources.General.New</span>
-                </button>
-                <button id="btnInputSave" type="button" class="btn btn-light">
-                    <i class="fa fa-save"></i> <span>@SBS.Resources.General.Save</span>
-                </button>
-                <button id="btnInputClose" type="button" class="btn btn-light" data-bs-dismiss="modal">
-                    <i class="fa fa-close"></i> @SBS.Resources.General.Close
-                </button>
-            </div>
+    </div>
+
+    <!-- Picture Section -->
+    <div class="col-lg-6 col-md-12 mb-2">
+        <label class="form-label" for="txtPictureApprovalDetail">@SBS.Resources.General.Picture</label>
+        <div class="d-flex gap-2">
+            <input type="file" id="txtPictureApprovalDetail" class="form-control form-control-sm" accept="image/*" />
+            <button id="btnAddFile" type="button" class="btn btn-success btn-sm">
+                <i class="glyphicon glyphicon-plus"></i> <span>@SBS.Resources.General.Add</span>
+            </button>
         </div>
     </div>
 </div>
