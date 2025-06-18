@@ -3,6 +3,8 @@ const path = require('path'); // libreria para manejar rutas de archivos y carpe
 const app = express(); // inicializa la aplicacion de express 
 const mongoose = require('mongoose'); // importa mongoose para manejar la base de datos MongoDB
 
+const Product = require('models/products'); // importa el modelo de productos definido en otro archivo
+
 mongoose.connect('mongodb://localhost:27017/farmStand', {  // conecta a la base de datos 'farmStand' en MongoDB
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
